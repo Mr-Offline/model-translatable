@@ -17,7 +17,7 @@ trait HasTranslations
     public function getTranslated(string $key, ?string $locale = null): string|array|null
     {
         $locale = $locale ?? app()->getLocale();
-        $cacheKey = $locale . '.' . $key;
+        $cacheKey = $locale.'.'.$key;
 
         if (! array_key_exists($cacheKey, $this->loadedTranslations)) {
             $value = $this->translations()
@@ -34,7 +34,7 @@ trait HasTranslations
     public function setTranslated(string $key, string|array $value, ?string $locale = null): void
     {
         if (! $this->exists) {
-            throw new \RuntimeException("Cannot set translation before the model is saved.");
+            throw new \RuntimeException('Cannot set translation before the model is saved.');
         }
 
         $locale = $locale ?? app()->getLocale();
@@ -45,7 +45,7 @@ trait HasTranslations
         );
 
         // Clear cache for this field
-        unset($this->loadedTranslations[$locale . '.' . $key]);
+        unset($this->loadedTranslations[$locale.'.'.$key]);
     }
 
     public function setTranslations(array $translations, ?string $locale = null): void
@@ -55,4 +55,3 @@ trait HasTranslations
         }
     }
 }
-

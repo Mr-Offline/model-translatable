@@ -2,9 +2,9 @@
 
 namespace ArsalanAhadian\ModelTranslatable\Tests;
 
+use ArsalanAhadian\ModelTranslatable\ModelTranslatableServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use ArsalanAhadian\ModelTranslatable\ModelTranslatableServiceProvider;
 
 class TestCase extends Orchestra
 {

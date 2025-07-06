@@ -2,9 +2,9 @@
 
 namespace ArsalanAhadian\ModelTranslatable;
 
+use ArsalanAhadian\ModelTranslatable\Commands\ModelTranslatableCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use ArsalanAhadian\ModelTranslatable\Commands\ModelTranslatableCommand;
 
 class ModelTranslatableServiceProvider extends PackageServiceProvider
 {
