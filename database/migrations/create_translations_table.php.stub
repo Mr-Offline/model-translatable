@@ -1,0 +1,22 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up()
+    {
+        Schema::create('translations', function (Blueprint $table) {
+            $table->id();
+            $table->morph('translatable');
+            $table->string('locale', 2)->index();
+            $table->string('field')->index();
+            $table->text('value')->nullable();
+            $table->timestamps();
+
+            $table->unique(['translatable_type', 'translatable_id', 'locale', 'field'], 'modeltranslatable_unique');
+        });
+    }
+};

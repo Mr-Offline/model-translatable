@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace ArsalanAhadian\ModelTranslatable\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class ModelTranslatableCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'modeltranslatable';
 
     public $description = 'My command';
 
